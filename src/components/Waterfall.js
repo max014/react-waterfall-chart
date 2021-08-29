@@ -1,18 +1,14 @@
-import { Row as DefaultRow } from './Row';
+import { DefaultRow } from './DefaultRow';
+import '../css/index.css';
 
-export function Waterfall({ data, row = DefaultRow }) {
+export function Waterfall({ data, RowComponent = DefaultRow }) {
     const now = new Date().getTime();
     const chartStart = Math.min(...data.map(({ start }) => start));
     const chartEnd = Math.max(...data.map(({ end }) => end || now));
     const totalTime = chartEnd - chartStart;
 
     return (
-        <div
-            style={{
-                display: 'flex',
-                flexDirection: 'column',
-            }}
-        >
+        <div className="waterfall-container">
             {data.map((rowData, i) => {
                 const timeFromStart = rowData.start - chartStart;
                 const duration = rowData.end ? rowData.end - rowData.start : chartEnd - rowData.start;
@@ -21,16 +17,12 @@ export function Waterfall({ data, row = DefaultRow }) {
 
                 const action = {
                     label: rowData.label,
-                    duration,
                     spaceFromStart,
+                    duration,
                     width,
-                    endFromLeft: spaceFromStart + width,
+                    index: i,
                 };
-                return (
-                    <div key={i} style={{ backgroundColor: i % 2 !== 0 && '#f5f5f5' }}>
-                        {row({ action })}
-                    </div>
-                );
+                return <RowComponent action={action} key={i} />;
             })}
         </div>
     );
