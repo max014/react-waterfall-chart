@@ -1,4 +1,4 @@
-export function DefaultRow({ action }) {
+export function DefaultRow({ action, units }) {
     return (
         <div className="default-row">
             <div className="default-row-label">{action.label}</div>
@@ -6,11 +6,15 @@ export function DefaultRow({ action }) {
                 <div
                     className="default-row-bar"
                     style={{
-                        marginLeft: action.spaceFromStart + '%',
-                        width: action.width + '%',
+                        backgroundColor: action.rowData.color,
+                        marginLeft: action.startAt.percentage + '%',
+                        width: action.value.percentage + '%',
                     }}
                 ></div>
-                <div>{action.duration}ms</div>
+                <div>
+                    {action.value.absolute}
+                    {units}
+                </div>
             </div>
         </div>
     );

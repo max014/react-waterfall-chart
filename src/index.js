@@ -5,34 +5,35 @@ import { Waterfall } from './components/Waterfall';
 const testData = [
     {
         label: 'precheckReport.v6.post',
-        start: 1629386193393,
-        end: 1629386215211,
+        start: 0,
+        end: 3,
     },
     {
         label: 'jiraComponentCollector.v3.post',
-        start: 1629386193396,
-        end: 1629386205688,
+        start: 3,
+        end: 5,
     },
     {
         label: 'fulcrumGrade.v2.post',
-        start: 1629386208228,
-        end: 1629386208228,
+        start: 5,
+        end: 4,
+        color: '#c00',
     },
     {
         label: 'fulcrumGrade.v2.post',
-        start: 1629386208229,
-        end: 1629386208229,
+        start: 4,
+        end: 8,
     },
     {
         label: 'fulcrumGrade.v2.post',
-        start: 1629386208263,
-        end: 1629386208271,
+        start: 8,
+        end: 9,
     },
     {
         label: 'fulcrumGrade.v2.post',
-        start: 1629386208530,
-        end: 1629386208530,
+        start: 9,
+        end: 10,
     },
 ];
 
-ReactDOM.render(<Waterfall data={testData} />, document.getElementById('root'));
+ReactDOM.render(<Waterfall data={testData} max={12} />, document.getElementById('root'));
