@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Waterfall } from './components/Waterfall';
+import { Waterfall } from '../dist/index';
 
 const testData = [
     {
