@@ -1,6 +1,11 @@
-.waterfall-container {
+.waterfall-container-horizontal {
     display: flex;
     flex-direction: column;
+}
+
+.waterfall-container-verticle {
+    display: flex;
+    flex-direction: row;
 }
 
 .default-row {

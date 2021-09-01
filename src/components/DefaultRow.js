@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export function DefaultRow({ action, units }) {
     return (
         <div className="default-row">
@@ -19,3 +21,8 @@ export function DefaultRow({ action, units }) {
         </div>
     );
 }
+
+DefaultRow.propTypes = {
+    action: PropTypes.object.isRequired,
+    units: PropTypes.string,
+};
