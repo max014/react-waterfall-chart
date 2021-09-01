@@ -2,7 +2,7 @@ import { DefaultRow } from './DefaultRow';
 import PropTypes from 'prop-types';
 import '../css/index.css';
 
-export function Waterfall({ data, max, direction, units = '', rowComponent }) {
+export function Waterfall({ data, max, units = '', rowComponent }) {
     const chartStart = Math.min(...data.map(({ start }) => start));
     const chartEnd = max || Math.max(...data.map(({ end }) => end));
     const total = chartEnd - chartStart;
@@ -10,7 +10,7 @@ export function Waterfall({ data, max, direction, units = '', rowComponent }) {
     const Row = rowComponent || DefaultRow;
 
     return (
-        <div className={direction === 'verticle' ? 'waterfall-container-verticle' : 'waterfall-container-horizontal'}>
+        <div className="waterfall-container">
             {data.map((rowData, index) => {
                 const unitsFromStart = Math.min(rowData.start, rowData.end) - chartStart;
                 const value = rowData.end ? rowData.end - rowData.start : chartEnd - rowData.start;
@@ -35,9 +35,15 @@ export function Waterfall({ data, max, direction, units = '', rowComponent }) {
 }
 
 Waterfall.propTypes = {
-    data: PropTypes.array.isRequired,
+    data: PropTypes.arrayOf(
+        PropTypes.shape({
+            label: PropTypes.string.isRequired,
+            start: PropTypes.number.isRequired,
+            end: PropTypes.number.isRequired,
+            color: PropTypes.string,
+        }).isRequired
+    ).isRequired,
     max: PropTypes.number,
-    direction: PropTypes.oneOf(['verticle', 'horizontal']),
     units: PropTypes.string,
     rowComponent: PropTypes.func,
 };
