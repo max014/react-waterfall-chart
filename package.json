@@ -1,6 +1,6 @@
 {
     "name": "react-waterfall-chart",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "A React component for creating waterfall charts.",
     "main": "dist/index.js",
     "scripts": {
