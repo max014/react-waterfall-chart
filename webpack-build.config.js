@@ -1,6 +1,7 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
     mode: 'production',
@@ -11,7 +12,14 @@ module.exports = {
         filename: 'index.js',
         libraryTarget: 'commonjs',
     },
-    plugins: [new CleanWebpackPlugin()],
+    plugins: [
+        new CleanWebpackPlugin(),
+        new TerserPlugin({
+            terserOptions: {
+                mangle: false,
+            },
+        }),
+    ],
     module: {
         rules: [
             {
