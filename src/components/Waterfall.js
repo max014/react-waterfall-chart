@@ -15,7 +15,7 @@ export function Waterfall({ data, maxValue, rowComponent }) {
                 const beforeBar = Math.min(eventData.start, eventData.end) - chartStart;
                 const value = eventData.end ? eventData.end - eventData.start : chartEnd - eventData.start;
 
-                const action = {
+                const event = {
                     label: eventData.label,
                     beforeBarPercent: (beforeBar / total) * 100,
                     beforeBar,
@@ -24,7 +24,7 @@ export function Waterfall({ data, maxValue, rowComponent }) {
                     originalData: eventData,
                     index,
                 };
-                return <Row action={action} key={index} />;
+                return <Row event={event} key={index} />;
             })}
         </div>
     );

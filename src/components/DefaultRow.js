@@ -1,24 +1,24 @@
 import PropTypes from 'prop-types';
 
-export function DefaultRow({ action }) {
+export function DefaultRow({ event }) {
     return (
         <div className="default-row">
-            <div className="default-row-label">{action.label}</div>
+            <div className="default-row-label">{event.label}</div>
             <div className="default-row-bar-container">
                 <div
                     className="default-row-bar"
                     style={{
-                        backgroundColor: action.originalData.color,
-                        marginLeft: action.beforeBarPercent + '%',
-                        width: action.barLengthPercent + '%',
+                        backgroundColor: event.originalData.color,
+                        marginLeft: event.beforeBarPercent + '%',
+                        width: event.barLengthPercent + '%',
                     }}
                 ></div>
-                {action.originalData.displayValue && <div>{action.originalData.displayValue}</div>}
+                {event.originalData.displayValue && <div>{event.originalData.displayValue}</div>}
             </div>
         </div>
     );
 }
 
 DefaultRow.propTypes = {
-    action: PropTypes.object.isRequired,
+    event: PropTypes.object.isRequired,
 };
