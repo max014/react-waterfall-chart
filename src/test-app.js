@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Waterfall } from '../dist/index';
+import { Waterfall } from './components/Waterfall';
 
 const testData = [
     {
@@ -33,7 +33,9 @@ const testData = [
         label: 'step 6',
         start: 9,
         end: 10,
+        color: 'green',
+        displayValue: '1 hour',
     },
 ];
 
-ReactDOM.render(<Waterfall data={testData} max={12} />, document.getElementById('root'));
+ReactDOM.render(<Waterfall data={testData} maxValue={12} />, document.getElementById('root'));

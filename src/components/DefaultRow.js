@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export function DefaultRow({ action, units }) {
+export function DefaultRow({ action }) {
     return (
         <div className="default-row">
             <div className="default-row-label">{action.label}</div>
@@ -8,15 +8,12 @@ export function DefaultRow({ action, units }) {
                 <div
                     className="default-row-bar"
                     style={{
-                        backgroundColor: action.rowData.color,
-                        marginLeft: action.startAt.percentage + '%',
-                        width: action.value.percentage + '%',
+                        backgroundColor: action.originalData.color,
+                        marginLeft: action.beforeBarPercent + '%',
+                        width: action.barLengthPercent + '%',
                     }}
                 ></div>
-                <div>
-                    {action.value.absolute}
-                    {units}
-                </div>
+                {action.originalData.displayValue && <div>{action.originalData.displayValue}</div>}
             </div>
         </div>
     );
@@ -24,5 +21,4 @@ export function DefaultRow({ action, units }) {
 
 DefaultRow.propTypes = {
     action: PropTypes.object.isRequired,
-    units: PropTypes.string,
 };
