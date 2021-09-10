@@ -4,38 +4,37 @@ import { Waterfall } from './components/Waterfall';
 
 const testData = [
     {
-        label: 'step 1',
+        labels: ['step 1'],
         start: 0,
         end: 3,
     },
     {
-        label: 'step 2',
+        labels: ['step 2'],
         start: 3,
         end: 5,
     },
     {
-        label: 'step 3',
+        labels: ['step 3'],
         start: 5,
         end: 4,
         color: '#c00',
     },
     {
-        label: 'step 4',
+        labels: ['step 4'],
         start: 4,
         end: 8,
     },
     {
-        label: 'step 5',
+        labels: ['step 5', 'asdf'],
         start: 8,
         end: 9,
     },
     {
-        label: 'step 6',
+        labels: ['step 6', '', 'gfdsgsf'],
         start: 9,
         end: 10,
         color: 'green',
-        displayValue: '1 hour',
     },
 ];
 
-ReactDOM.render(<Waterfall data={testData} maxValue={12} />, document.getElementById('root'));
+ReactDOM.render(<Waterfall data={testData} />, document.getElementById('root'));

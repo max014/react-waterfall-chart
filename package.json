@@ -1,6 +1,6 @@
 {
     "name": "react-waterfall-chart",
-    "version": "0.0.5",
+    "version": "0.1.0",
     "description": "A React component for creating waterfall charts.",
     "main": "dist/index.js",
     "scripts": {
@@ -13,6 +13,10 @@
         "type": "git",
         "url": "https://github.com/max014/react-waterfall-chart.git"
     },
+    "keywords": [
+        "waterfall chart",
+        "cascade chart"
+    ],
     "license": "ISC",
     "devDependencies": {
         "@babel/core": "^7.15.0",
