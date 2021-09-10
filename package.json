@@ -1,11 +1,11 @@
 {
     "name": "react-waterfall-chart",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "A React component for creating waterfall charts.",
     "main": "dist/index.js",
     "scripts": {
-        "start": "webpack-dev-server --config config/webpack/dev.js",
-        "build": "webpack --config config/webpack/build.js",
+        "start": "webpack-dev-server --config webpack-dev.js",
+        "build": "webpack --config webpack-build.js",
         "test": "jest --coverage"
     },
     "author": "Max Oppor",
