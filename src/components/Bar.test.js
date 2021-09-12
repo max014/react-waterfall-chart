@@ -6,7 +6,7 @@ describe('Bar', () => {
     it('Should render data', () => {
         // arrange
         const testData = {
-            barLengthPercent: 50,
+            barLengthPercent: 51,
             beforeBarPercent: 0,
             color: '#ccc',
         };
