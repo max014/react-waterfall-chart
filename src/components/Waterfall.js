@@ -53,8 +53,8 @@ Waterfall.propTypes = {
             labels: PropTypes.arrayOf(PropTypes.string),
             start: PropTypes.number.isRequired,
             end: PropTypes.number.isRequired,
-            color: PropTypes.string,
+            color: PropTypes.string
         }).isRequired
     ).isRequired,
-    maxValue: PropTypes.number,
+    maxValue: PropTypes.number
 };

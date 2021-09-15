@@ -5,14 +5,14 @@ module.exports = {
     entry: path.resolve(__dirname, 'src', 'test-app.js'),
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'index.js',
+        filename: 'index.js'
     },
     devServer: {
         static: {
-            directory: path.join(__dirname, 'public'),
+            directory: path.join(__dirname, 'public')
         },
         open: true,
-        port: 9000,
+        port: 9000
     },
     module: {
         rules: [
@@ -28,24 +28,24 @@ module.exports = {
                                 [
                                     '@babel/preset-env',
                                     {
-                                        targets: 'defaults',
-                                    },
+                                        targets: 'defaults'
+                                    }
                                 ],
                                 [
                                     '@babel/preset-react',
                                     {
-                                        runtime: 'automatic',
-                                    },
-                                ],
-                            ],
-                        },
-                    },
-                ],
+                                        runtime: 'automatic'
+                                    }
+                                ]
+                            ]
+                        }
+                    }
+                ]
             },
             {
                 test: /\.css$/i,
-                use: ['style-loader', 'css-loader'],
-            },
-        ],
-    },
+                use: ['style-loader', 'css-loader']
+            }
+        ]
+    }
 };

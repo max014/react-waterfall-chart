@@ -8,7 +8,7 @@ describe('Bar', () => {
         const testData = {
             barLengthPercent: 50,
             beforeBarPercent: 0,
-            color: '#ccc',
+            color: '#ccc'
         };
 
         // act

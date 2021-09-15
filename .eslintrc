@@ -1,0 +1,63 @@
+{
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+        "ecmaVersion": 2021,
+        "sourceType": "module"
+    },
+    "env": {
+        "node": true,
+        "es6": true,
+        "browser": true,
+        "jest": true
+    },
+    "plugins": ["react", "prettier", "react-hooks", "import"],
+    "extends": ["standard", "plugin:react/recommended", "prettier"],
+    "settings": {
+        "react": {
+            "version": "detect"
+        },
+        "import/ignore": ["node_modules"]
+    },
+    "rules": {
+        "import/no-unresolved": "error",
+        "import/named": "error",
+        "camelcase": "off",
+        "no-console": "error",
+        "no-return-assign": "off",
+        "semi": ["error", "always"],
+        "semi-spacing": ["warn", { "before": false, "after": true }],
+        "indent": ["warn", 4, { "SwitchCase": 1 }],
+        "handle-callback-err": "warn",
+        "react/jsx-uses-react": "off",
+        "react/react-in-jsx-scope": "off",
+        "react/prop-types": [2, { "ignore": ["match", "location"] }],
+        "react/no-find-dom-node": "off",
+        "react/no-string-refs": "off",
+        "react/display-name": "off",
+        "react/no-unescaped-entities": ["error", { "forbid": [">", "}", "\\'"] }],
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "off",
+        "comma-dangle": ["error", "only-multiline"],
+        "quote-props": "off",
+        "eqeqeq": "off",
+        "curly": "warn",
+        "linebreak-style": ["error", "unix"],
+        "eol-last": "warn",
+        "no-multiple-empty-lines": ["warn", { "max": 1, "maxEOF": 1 }],
+        "quotes": ["warn", "single", { "avoidEscape": true }],
+        "dot-notation": "warn",
+        "require-yield": "off",
+        "max-len": ["warn", { "code": 120, "ignoreComments": true }],
+        "arrow-body-style": ["error", "as-needed"],
+        "no-param-reassign": "off",
+        "new-cap": "off",
+        "no-use-before-define": "off",
+        "func-names": "off",
+        "no-plusplus": "off",
+        "no-restricted-syntax": "off",
+        "no-underscore-dangle": "off",
+        "no-unused-vars": ["error", { "argsIgnorePattern": "^next$" }],
+        "object-curly-spacing": ["warn", "always"],
+        "prettier/prettier": "error"
+    }
+}

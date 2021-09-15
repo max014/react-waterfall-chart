@@ -10,15 +10,15 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'index.js',
-        libraryTarget: 'commonjs',
+        libraryTarget: 'commonjs'
     },
     plugins: [
         new CleanWebpackPlugin(),
         new TerserPlugin({
             terserOptions: {
-                mangle: false,
-            },
-        }),
+                mangle: false
+            }
+        })
     ],
     module: {
         rules: [
@@ -34,24 +34,24 @@ module.exports = {
                                 [
                                     '@babel/preset-env',
                                     {
-                                        targets: 'defaults',
-                                    },
+                                        targets: 'defaults'
+                                    }
                                 ],
                                 [
                                     '@babel/preset-react',
                                     {
-                                        runtime: 'automatic',
-                                    },
-                                ],
-                            ],
-                        },
-                    },
-                ],
+                                        runtime: 'automatic'
+                                    }
+                                ]
+                            ]
+                        }
+                    }
+                ]
             },
             {
                 test: /\.css$/i,
-                use: ['style-loader', 'css-loader'],
-            },
-        ],
-    },
+                use: ['style-loader', 'css-loader']
+            }
+        ]
+    }
 };
