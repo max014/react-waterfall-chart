@@ -9,7 +9,7 @@ export function Bar({ beforeBarPercent, barLengthPercent, color }) {
                     style={{
                         backgroundColor: color,
                         marginLeft: beforeBarPercent + '%',
-                        width: barLengthPercent + '%',
+                        width: barLengthPercent + '%'
                     }}
                 ></div>
             </div>
@@ -20,5 +20,5 @@ export function Bar({ beforeBarPercent, barLengthPercent, color }) {
 Bar.propTypes = {
     beforeBarPercent: PropTypes.number.isRequired,
     barLengthPercent: PropTypes.number.isRequired,
-    color: PropTypes.string,
+    color: PropTypes.string
 };

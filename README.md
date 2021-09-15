@@ -17,18 +17,18 @@ const data = [
     {
         labels: ['step 1'],
         start: 0,
-        end: 3,
+        end: 3
     },
     {
         labels: ['step 2'],
         start: 3,
-        end: 9,
+        end: 9
     },
     {
         labels: ['step 3'],
         start: 9,
-        end: 10,
-    },
+        end: 10
+    }
 ];
 
 function App() {

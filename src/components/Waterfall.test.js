@@ -9,13 +9,13 @@ describe('Waterfall', () => {
             {
                 labels: ['row 1'],
                 start: 0,
-                end: 1,
+                end: 1
             },
             {
                 labels: ['row 2'],
                 start: 1,
-                end: 2,
-            },
+                end: 2
+            }
         ];
 
         // act
