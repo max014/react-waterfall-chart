@@ -29,7 +29,7 @@ const testData = [
         end: 9
     },
     {
-        labels: ['step 6', '', 'gfdsgsf'],
+        labels: ['step 6'],
         start: 9,
         end: 10,
         color: 'green'
